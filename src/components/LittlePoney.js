@@ -24,7 +24,7 @@ const gePrice = get(choices([metaPrices, "price"], "price"));
 
 export default function LittlePoney({ poney }) {
   return (
-    <div className="m-2 border p-2 flex text-grey-darker font-mono rounded shadow-lg">
+    <div className="m-2 border p-2 flex flex-1 text-grey-darker font-mono rounded shadow-lg">
       <img src={poney.image} className="flex-initial" />
       <div className="flex-1 flex flex-col justify-between px-3">
         <span className="text-md">{poney.name}</span>

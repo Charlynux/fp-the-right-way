@@ -3,55 +3,34 @@ import React, { Component } from "react";
 import * as R from "ramda";
 import * as L from "partial.lenses";
 
-import {PolyComponent, PricesBanner } from "./components";
+import { PolyComponent, PrettyButton, PricesBanner } from "./components";
 
-import { simplePoney, complexPoney, poneys } from "./data";
+import { simplePoney, complexPoney, poneys, exampleBannerItems } from "./data";
 import { giveMeMoreMoney, applySuperDiscount } from "./utils";
 
-// {
-//   name: "Twilight Starla Sparkle",
-//   image: "images/twilight.jpg",
-//   meta: {
-//     prices: {
-//       price: 3300,
-//       premiumPrice: 3900
-//     }
-//   }
-// };
-
-
-// setter + getter = Lens
-// state.meta.prices.price
-const poneyLens = [L.elems, L.when(poney => poney.name.includes("n"))];
-const pricesLens = ["meta", "prices"];
-const priceLens = [pricesLens, "price"];
-const premiumPriceLens = [pricesLens, "premiumPrice"];
-
-function update(state) {
-  return L.modify([poneyLens, premiumPriceLens], giveMeMoreMoney, state);
-}
-
-const state = poneys;
-
-const exampleBannerItems = [
-  { label: "iPhone X en promo !!!", price: 3000 },
-  { label: "Le Wiko, c'est pour le boulot", price: 100 },
-]
-
-function prepareBanner(poneys) {
-  return poneys.map(() => exampleBannerItems[0]);
-}
-
+const update = function(state) {
+  return state;
+};
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "Twilight Starla Sparkle",
+      image: "images/twilight.jpg",
+      price: 3300
+    };
+  }
+
   render() {
     return (
       <React.Fragment>
-        <PricesBanner items={prepareBanner(poneys)} />
+        {/* <PricesBanner items={exampleBannerItems} /> */}
         <div className="flex">
-          <PolyComponent state={state} />
-          <PolyComponent state={update(state)} />
+          <PolyComponent state={this.state} />
         </div>
+        <PrettyButton onClick={() => this.setState(update)} />
       </React.Fragment>
     );
   }
