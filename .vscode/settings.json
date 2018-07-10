@@ -1,12 +1,17 @@
 {
   // Andre Staltz settings
 
-  "workbench.colorTheme": "GitHub Clean White",
+  "workbench.colorTheme":
+    "GitHub Clean White",
   "workbench.colorCustomizations": {
-    "editorCursor.background": "#ffffff",
-    "editorCursor.foreground": "#0000bb",
-    "editor.lineHighlightBackground": "#f0f0f0",
-    "editor.selectionBackground": "#aaeeff"
+    "editorCursor.background":
+      "#ffffff",
+    "editorCursor.foreground":
+      "#0000bb",
+    "editor.lineHighlightBackground":
+      "#f0f0f0",
+    "editor.selectionBackground":
+      "#aaeeff"
   },
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
@@ -17,10 +22,13 @@
   "editor.fontFamily": "SF Mono",
   "editor.fontWeight": "600",
   "editor.fontSize": 24,
-  "terminal.integrated.fontFamily": "SF Mono",
-  "terminal.integrated.fontWeight": "800",
+  "terminal.integrated.fontFamily":
+    "SF Mono",
+  "terminal.integrated.fontWeight":
+    "800",
   "terminal.integrated.fontSize": 28,
-  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shell.linux":
+    "/bin/bash",
   "editor.formatOnSave": yes,
-  "prettier.printWidth": 30
+  "prettier.printWidth": 40
 }

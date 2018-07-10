@@ -1,12 +1,27 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 
 import * as R from "ramda";
 import * as L from "partial.lenses";
 
-import { PolyComponent, PrettyButton, PricesBanner } from "./components";
+import {
+  PolyComponent,
+  PrettyButton,
+  PricesBanner
+} from "./components";
 
-import { simplePoney, complexPoney, poneys, exampleBannerItems } from "./data";
-import { giveMeMoreMoney, applySuperDiscount } from "./utils";
+import {
+  simplePoney,
+  complexPoney,
+  poneys,
+  exampleBannerItems
+} from "./data";
+
+import {
+  giveMeMoreMoney,
+  applySuperDiscount
+} from "./utils";
 
 const update = function(state) {
   return state;
@@ -28,9 +43,15 @@ class App extends Component {
       <React.Fragment>
         {/* <PricesBanner items={exampleBannerItems} /> */}
         <div className="flex">
-          <PolyComponent state={this.state} />
+          <PolyComponent
+            state={this.state}
+          />
         </div>
-        <PrettyButton onClick={() => this.setState(update)} />
+        <PrettyButton
+          onClick={() =>
+            this.setState(update)
+          }
+        />
       </React.Fragment>
     );
   }
