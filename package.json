@@ -6,7 +6,7 @@
     "autoprefixer": "^8.6.5",
     "postcss": "^8.2.14",
     "postcss-cli": "^8.3.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^0.5.3"
   },
   "dependencies": {
